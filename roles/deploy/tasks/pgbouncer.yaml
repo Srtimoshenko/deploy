@@ -1,0 +1,16 @@
+---
+ - name: Install_pgbouncer
+   apt:
+     name: pgbouncer
+     state: latest
+ 
+ - name: stop_pgbouncer_service
+   servise:
+     name: pgbouncer
+     state: stopped
+ 
+     # - name: create_pgbouncer_ini
+     #temlate:
+     #src: pgbouncer.ini.j2
+     #dest: " {{pgbouncer_ini}} "  
+     #owner: "{{ }}"   

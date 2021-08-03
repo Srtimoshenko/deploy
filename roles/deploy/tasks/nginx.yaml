@@ -1,0 +1,22 @@
+---
+- name: install_nginx
+  apt:
+    name: nginx
+    state: latest
+
+- name: nginx_start
+  service:
+    name: nginx
+    state: started
+    enabled: yes
+
+- name: config_nginx
+  template:
+    src: remedly.j2
+    dest: "/etc/nginx/cof.d/dev.remedly.conf "
+
+- name: nginx_restart
+  service:
+    name: nginx
+    state: restarted
+    enadled: yes    

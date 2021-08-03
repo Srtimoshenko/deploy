@@ -1,0 +1,8 @@
+ - name: nginx_deploy
+   include: nginx.yaml
+
+# - name: php_deploy
+#   include: php.yaml
+
+ - name: pgbouncer_deploy
+   include: pgbouncer.yaml  
